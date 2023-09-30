@@ -1,0 +1,6 @@
+training-data/
+test-data/
+temp.py
+video.mp4
+labels.pkl
+employees_model.yml
