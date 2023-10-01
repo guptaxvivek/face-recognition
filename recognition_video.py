@@ -26,7 +26,7 @@ def face_rec_video(videopath):
         for (x, y, w, h) in faces:
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
             label, confidence = model.predict(gray[y:y+w, x:x+h])
-            if confidence > 60:
+            if confidence > 58:
                 cv2.putText(frame, names[label], (x, y), cv2.FONT_HERSHEY_SIMPLEX,
                             0.75, (0, 255, 0), 2)
             else:

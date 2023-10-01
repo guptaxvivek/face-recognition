@@ -20,7 +20,7 @@ def face_detect(imagePath):
 		cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
 	
 	# Show Detected faces.
-	cv2.imshow("Faces found", image)
+	# cv2.imshow("Faces found", image)
 	cv2.waitKey(1)
 	
 	# Append the detected faces into grays list.

@@ -12,10 +12,11 @@ try:
     with open('labels.pkl','rb') as f:
         labels = pickle.load(f)
 except FileNotFoundError:
+    labels = {}
     print("Not Found")
     label = 0
 
-print(labels)
+# print(labels)
 def start_capture(name):
         path = "training-data/s" + str(label+1)
         num_of_images = 0
@@ -51,7 +52,7 @@ def start_capture(name):
                 pass
 
             if key == ord("q") or key == 27 or num_of_images > 150:
-                labels[label] = name
+                labels[label+1] = name
                 with open('labels.pkl','wb') as f:
                     pickle.dump(labels, f, protocol=pickle.HIGHEST_PROTOCOL)
                 break
